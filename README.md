@@ -6,7 +6,7 @@ This project provides an AI-based solution to recognize hand signs using the **Y
 
 Before training, download and extract the dataset:
 
-**📁 dataset4.zip**
+**📁 [dataset4.zip](https://drive.google.com/file/d/1MbMCORWnfd-g7gx3AAhNqBOff7CSg3je/view?usp=sharing)**
 
 This dataset is included in the repository and contains labeled image data representing sign language gestures.
 
