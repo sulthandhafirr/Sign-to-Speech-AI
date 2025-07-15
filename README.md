@@ -19,10 +19,9 @@ You can run this notebook in Google Colab or locally via Jupyter Notebook.
 
 ### Training Steps:
 1. Open `YOLOv11n_train.ipynb`
-2. Run the notebook step-by-step
-3. Ensure the dataset path is correctly set to your extracted `signdataset/` folder
-4. The trained model will be exported to ONNX format (e.g., `yolov11n_sign.onnx`)
-
+2. Set the correct dataset path
+3. Run the notebook step-by-step
+5. Export to ONNX or use `.pt` for local inference
 
 ## How to Run `app.py` Locally
 
@@ -32,8 +31,9 @@ This application runs in a local Python environment using your webcam. It detect
 
 Ensure the following files are in the same folder:
 - `app.py`
-- `yolov11n_sign.onnx`
+- `best.pt`
 - (optional) `requirements.txt`
+- bisindow.jpg
 
 ### 2. Install Dependencies
 
@@ -46,30 +46,31 @@ pip install -r requirements.txt
 Or install manually:
 
 ```
-pip install opencv-python numpy gTTS ultralytics
+pip install opencv-python numpy gTTS playsound==1.2.2 ultralytics
 ```
 
-# 3. Run the Application
+### 3. Run the Application
 Open a terminal, navigate to the project folder, and run:
 
-bash
-Copy
-Edit
+```bash
 python app.py
+```
 The webcam will open, and the model will detect hand signs in real time. Detected gestures will be translated to text and spoken using gTTS.
 
-# Technologies Used
-YOLOv11n – Lightweight object detection model (Ultralytics)
+## Instructions (in-app)
+- [Q] Quit
+- [R] Reset
+- HALLO once → space
+- HALLO twice → speak text
 
-OpenCV – Webcam video feed & image processing
+## Tech Stack
+- Languages: Python
+- Model: YOLOv11n
+- Libraries: OpenCV, NumPy, gTTS, Playsound
+- Tools: Google Colab, VS Code
+- Deployment: Local GUI (OpenCV)
 
-NumPy – Array and matrix operations
-
-gTTS (Google Text-to-Speech) – Converts recognized gestures to spoken output
-
-ONNX – For running exported PyTorch models
-
-# Credits
+## Credits
 Sign Language Datasets: Public sources (Google Images, Roboflow, etc.)
 
 Object Detection: YOLOv11n (Ultralytics community version)
