@@ -2,7 +2,7 @@
 
 This project provides an AI-based solution to recognize hand signs using the **YOLOv11n** object detection model and convert them into real-time speech using **Google Text-to-Speech (gTTS)**. It is designed to help bridge communication between sign language users and non-signers through camera-based gesture detection.
 
-## Dataset
+# Dataset
 
 Before training, download and extract the dataset:
 
@@ -11,19 +11,19 @@ Before training, download and extract the dataset:
 This dataset is included in the repository and contains labeled image data representing sign language gestures.
 
 
-## Model Training
+# Model Training
 
-Training is handled using the notebook: `YOLOv11n_train.ipynb`
+Training is handled using the notebook: `SigntoSpeechAI.ipynb`
 
 You can run this notebook in Google Colab or locally via Jupyter Notebook.
 
 ### Training Steps:
-1. Open `YOLOv11n_train.ipynb`
+1. Open `SigntoSpeechAI.ipynb`
 2. Set the correct dataset path
 3. Run the notebook step-by-step
 5. Export to ONNX or use `.pt` for local inference
 
-## How to Run `app.py` Locally
+# How to Run `app.py` Locally
 
 This application runs in a local Python environment using your webcam. It detects hand gestures and converts them into speech output.
 
@@ -57,26 +57,20 @@ python app.py
 ```
 The webcam will open, and the model will detect hand signs in real time. Detected gestures will be translated to text and spoken using gTTS.
 
-## Instructions (in-app)
+# Instructions (in-app)
 - [Q] Quit
 - [R] Reset
 - HALLO once → space
 - HALLO twice → speak text
 
-## Tech Stack
-- Languages: Python
-- Model: YOLOv11n
-- Libraries: OpenCV, NumPy, gTTS, Playsound
-- Tools: Google Colab, VS Code
-- Deployment: Local GUI (OpenCV)
+# Credits
+- Dataset sources: Roboflow
+- Object Detection: YOLOv11n by Ultralytics
+- Model Export: PyTorch → ONNX
+- Real-time Detection: OpenCV
+- Audio Output: gTTS, Playsound
+- Development: Python, VS Code
+- Model Training: Google Colab
 
-## Credits
-Sign Language Datasets: Public sources (Google Images, Roboflow, etc.)
-
-Object Detection: YOLOv11n (Ultralytics community version)
-
-Model Conversion: PyTorch → ONNX
-
-Audio Output: gTTS
-
-Real-time Detection: OpenCV + Python
+---
+Developed by: Sulthan Dhafir Rafief
